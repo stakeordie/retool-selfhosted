@@ -12,23 +12,23 @@ services:
     value: production
   - key: POSTGRES_DB
     fromDatabase:
-      name: retool
+      name: retool-k8ci
       property: database
   - key: POSTGRES_HOST
     fromDatabase:
-      name: retool
+      name: retool-k8ci
       property: host
   - key: POSTGRES_PORT
     fromDatabase:
-      name: retool
+      name: retool-k8ci
       property: port
   - key: POSTGRES_USER
     fromDatabase:
-      name: retool
+      name: retool-k8ci
       property: user
   - key: POSTGRES_PASSWORD
     fromDatabase:
-      name: retool
+      name: retool-k8ci
       property: password
   - key: ENCRYPTION_KEY
     generateValue: true
@@ -38,8 +38,3 @@ services:
     value: true
   - key: LICENSE_KEY
     value: EXPIRED-LICENSE-KEY-TRIAL
-
-databases:
-- name: retool
-  databaseName: retooldb
-  user: retool_user
